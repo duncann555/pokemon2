@@ -1,0 +1,23 @@
+:root {
+  /* Colores principales Pokédex */
+  --pokedex-red: #d62828;
+  --pokeball-white: #f8f9fa;
+  --pokeball-black: #1e1e1e;
+
+  /* Colores de acento estilo Pokémon */
+  --pikachu-yellow: #ffd100;
+  --squirtle-blue: #3b9cff;
+  --bulbasaur-green: #7ac74c;
+  --gengar-purple: #6f35fc;
+  --charizard-orange: #f77f00;
+  --metallic-grey: #6c757d;
+}
+
+.bg-pokedex-red {
+    background-color: var(--pokedex-red);
+}
+
+.color-text{
+    color: var(--pokedex-white);
+}
+
