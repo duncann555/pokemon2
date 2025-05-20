@@ -1,54 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
+    <meta name="description" content="Pokédex con Bootstrap" />
     <meta name="author" content="SF" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <title>Pokédex</title>
 
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-
     <link rel="stylesheet" href="./css/style.css" />
-
-    <title>Pokédex</title>
   </head>
-  <body class="min-vh-100 d-flex flex-column justify-content-between">
+
+  <body>
     <header>
-      
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          
+          <a class="navbar-brand fw-bold text-danger" href="#">Pokédex</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              
               <li class="nav-item bg-pokedex-red me-2 rounded-3">
                 <a class="nav-link color-text" href="#">Pokedex</a>
               </li>
-              <li class="nav-item bg-pokedex-red me-2 rounded-3 ">
+              <li class="nav-item bg-pokedex-red me-2 rounded-3">
                 <a class="nav-link color-text" href="#">Aplicaciones</a>
               </li>
-              <li class="nav-item bg-pokedex-red me-2 rounded-3 ">
+              <li class="nav-item bg-pokedex-red me-2 rounded-3">
                 <a class="nav-link color-text" href="#">Juegos de Cartas</a>
               </li>
-              <li class="nav-item bg-pokedex-red me-2 rounded-3 ">
+              <li class="nav-item bg-pokedex-red me-2 rounded-3">
                 <a class="nav-link color-text" href="#">Noticias</a>
               </li>
-              
             </ul>
 
             <form class="d-flex" role="search">
               <input
-                class="form-control me-2 "
+                class="form-control me-2"
                 type="search"
-                placeholder="Ingrese su pokemon"
-                aria-label="Search"
+                placeholder="Ingrese su Pokémon"
+                aria-label="Buscar Pokémon"
               />
               <button class="btn bg-pokedex-red color-text" type="submit">
                 Buscar
@@ -58,11 +63,52 @@
         </div>
       </nav>
     </header>
-    <main></main>
+
+    <main class="min-vh-100 d-flex flex-column">
+      <h1 class="text-center mt-4 mb-4">POKÉDEX</h1>
+
+      <section class="row d-flex text-center justify-content-center px-3">
+        
+        <article class="col-12 col-md-4 mb-4">
+          <div class="bg-body-tertiary p-4 rounded-3 shadow" style="width:21rem">
+            <div
+              class="card mx-auto border border-secondary rounded-3"
+              style="width: 18rem;"
+            >
+              <div class="bg-pokedex-blue rounded-top-3 position-relative">
+                <img
+                  src="./img/1.png"
+                  class="card-img-top img"
+                  alt="Foto de Charmander"
+                />
+                <div class="badge bg-charizard-orange position-absolute top-0 end-0 rounded-4 m-2 p-2">
+                  <p class="mb-0">Fuego</p>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <h3 class="card-title">Charmander</h3>
+                <p class="fst-italic mb-0">Número: 001</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </section>
+    </main>
+
     <footer class="text-center bg-metallic-grey text-white py-3">
-        <p>Todos los derechos reservados © </p>
-        <a href="https://www.instagram.com/sebaflomenbaun/"></a>
+      <p class="mb-1">Todos los derechos reservados ©</p>
+      <a
+        href="https://www.instagram.com/sebaflomenbaun/"
+        class="text-white text-decoration-none"
+        target="_blank"
+      >
+        @sebaflomenbaun
+      </a>
     </footer>
+
     <script src="./js/bootstrap.min.js"></script>
   </body>
 </html>
+

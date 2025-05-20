@@ -5,6 +5,7 @@
   --pokeball-black: #1e1e1e;
 
   /* Colores de acento estilo Pokémon */
+  --azul-poke: #005dbb;
   --pikachu-yellow: #ffd100;
   --squirtle-blue: #3b9cff;
   --bulbasaur-green: #7ac74c;
@@ -20,7 +21,24 @@
 .bg-metallic-grey {
     background-color: var(--metallic-grey);
 }
+
+.bg-charizard-orange {
+    background-color: var(--charizard-orange);
+}
+
+.bg-pokedex-white {
+    background-color: var(--pokeball-white);
+}
+
+.bg-pokedex-blue {
+    background-color: var(--azul-poke);
+}
 .color-text{
     color: var(--pokedex-white);
+}
+
+.img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
 
