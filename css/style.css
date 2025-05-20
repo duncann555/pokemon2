@@ -17,6 +17,9 @@
     background-color: var(--pokedex-red);
 }
 
+.bg-metallic-grey {
+    background-color: var(--metallic-grey);
+}
 .color-text{
     color: var(--pokedex-white);
 }
