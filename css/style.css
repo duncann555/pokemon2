@@ -1,0 +1,49 @@
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.pokemon-card {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+async function buscarPokemon() {
+  const nombre = document.getElementById('pokemonInput').value.toLowerCase();
+  const container = document.getElementById('pokemonContainer');
+  container.innerHTML = 'Cargando...';
+
+  try {
+    const respuesta = await fetch(https://pokeapi.co/api/v2/pokemon/${nombre});
+    if (!respuesta.ok) throw new Error('Pokémon no encontrado');
+
+    const datos = await respuesta.json();
+    container.innerHTML = `
+      <h2>${datos.name.toUpperCase()}</h2>
+      <img src="${datos.sprites.front_default}" alt="${datos.name}">
+      <p><strong>ID:</strong> ${datos.id}</p>
+      <p><strong>Tipo:</strong> ${datos.types.map(t => t.type.name).join(', ')}</p>
+    `;
+  } catch (error) {
+    container.innerHTML = <p style="color: red;">Error: ${error.message}</p>;
+  }
+}
